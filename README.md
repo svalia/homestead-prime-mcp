@@ -12,6 +12,12 @@
 npx -y homestead-prime-mcp install --url https://homesteadprime.ru/mcp --code XXXX-XXXX
 ```
 
+Или напрямую с GitHub (даже без реестра npm):
+
+```bash
+npx -y github:svalia/homestead-prime-mcp install --url https://homesteadprime.ru/mcp --code XXXX-XXXX
+```
+
 Или без `npx` (через прямую установку `install.sh`):
 
 ```bash
