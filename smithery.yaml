@@ -1,0 +1,26 @@
+version: 1
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      url:
+        type: string
+        title: Homestead Prime MCP URL
+        default: https://homesteadprime.ru/mcp
+      token:
+        type: string
+        title: Homestead Prime MCP Token (hsm_mcp_...)
+      code:
+        type: string
+        title: One-time Pairing Code (XXXX-XXXX)
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: [
+        './bin/cli.js',
+        '--url', config.url || 'https://homesteadprime.ru/mcp',
+        ...(config.token ? ['--token', config.token] : []),
+        ...(config.code ? ['--code', config.code] : [])
+      ]
+    })

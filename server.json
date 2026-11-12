@@ -1,0 +1,26 @@
+{
+  "name": "io.github.svalia/homestead-prime-mcp",
+  "title": "Homestead Prime — Household & Family Office MCP",
+  "description": "Official MCP server and auto-installer for Homestead Prime household, staff, and family office management.",
+  "version": "1.3.0",
+  "repository": {
+    "url": "https://github.com/svalia/homestead-prime-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "homestead-prime-mcp",
+      "version": "1.3.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://homesteadprime.ru/mcp"
+    }
+  ]
+}
